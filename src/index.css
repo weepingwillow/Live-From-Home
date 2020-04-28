@@ -1,3 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    margin-block-start: 0;
+    margin-block-end: 0; 
+    margin-inline-start: 0; 
+    margin-inline-end: 0;
+    padding-block-start: 0; 
+    padding-block-end: 0; 
+    padding-inline-start: 0; 
+    padding-inline-end: 0;
+}
+
 body {
     background-color: whitesmoke;
+}
+
+#container {
+    display: grid;
+}
+
+nav {
+    display: grid;
+    align-items: center;
+    margin: 0;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+nav h1 {
+    font-size: 2.5rem;
+}
+
+.search-container {
+    display: grid;
+    text-align: center;
+}
+
+.search-container .search-query {
+    padding: 15px 0;
+}
+
+.search-container input {
+    padding: 10px;
+    width: 85%;
+    font-size: 1.25rem;
+}
+
+.results-container ul {
+    width: 85%;
+    list-style: none;
+    margin: 0 auto;
+}
+
+.results-container ul li {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid grey;
+}
+.results-container ul li:hover{
+    background: lightgrey;
+}
+
+.results-container ul li a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+.results-container ul li span.video {
+    display: inline-block;
+    width: 100%;
+    color: gray;
+    font-size: .85rem;
+}
+
+.results-container ul li span.artist {
+    display: inline-block;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.results-container ul li span.song {
+    display: inline-block;
+    font-size: 1.25rem;
+}
+.results-container ul li span.timestamp {
+    display: inline-block;
+    font-size: .85rem;
+    padding-left: 10px;
 }
