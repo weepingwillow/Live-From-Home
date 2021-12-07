@@ -78,7 +78,7 @@ class App extends React.Component {
                                 .filter(video => 
                                     video.artist.toLowerCase().includes(value.toLowerCase()) ||
                                     video.title.toLowerCase().includes(value.toLowerCase())
-                                    );
+                                );
        
         let videoURL;
         let videoThumbnail;
