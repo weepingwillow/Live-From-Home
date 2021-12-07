@@ -120,10 +120,16 @@ class App extends React.Component {
     }
 
     buildVideoURL(id, timestamp) {
-        let minutes = timestamp.slice(0, timestamp.indexOf(":"));
-        let seconds = timestamp.slice(timestamp.indexOf(":") + 1, timestamp.length);
-        let timeInSeconds = (parseInt(minutes) * 60) + parseInt(seconds);
-        return 'https://www.youtube.com/watch?v=' + id + '&t=' + timeInSeconds + 's';
+        let time = timestamp.split(':');
+        let minutes = 1;
+        let seconds = 0;
+
+        while(time.length > 0){
+            seconds += minutes * parseInt(time.pop(), 10);
+            minutes *= 60;
+        }
+
+        return 'https://www.youtube.com/watch?v=' + id + '&t=' + seconds + 's';
     }
 
     buildVideoThumbnail(id) {
